@@ -68,11 +68,20 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row flex-wrap items-start gap-3"
           >
+            {/* 主 CTA：更显眼 - 实心绿 + 大一号 + 强发光 */}
+            <MagneticButton
+              href="https://luma.com/user/webpsy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta-primary px-7 py-4 sm:px-9 sm:py-4 rounded-full font-bold text-base sm:text-lg uppercase tracking-wider border-2 border-[#14F195] bg-[#14F195] text-black hover:bg-[#2affb8] hover:border-[#2affb8] transition-all duration-300 inline-block text-center"
+            >
+              FinTech Event
+            </MagneticButton>
             <MagneticButton
               href="https://t.me/+hcJ97ZnmLVZhNDQ1"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-black font-bold text-sm rounded-full hover:bg-gray-200 transition-colors inline-block text-center"
+              className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm border-2 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:border-white/60 transition-all duration-300 inline-block text-center"
             >
               Join the Network
             </MagneticButton>
@@ -80,17 +89,9 @@ export default function Hero() {
               href="https://webpsy.notion.site/c9bc71b06fe84eff959251a90da955f6?v=74467a5f965248d7b696bd8c2ebb848b&source=copy_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 sm:px-8 sm:py-4 border border-white/20 text-white font-bold text-sm rounded-full hover:bg-white/10 transition-colors hover:border-white inline-block text-center"
+              className="px-6 py-3.5 sm:px-8 sm:py-4 rounded-full font-bold text-sm border-2 border-white/40 bg-white/5 text-white hover:bg-white/15 hover:border-white/60 transition-all duration-300 inline-block text-center"
             >
               View Concept Deck
-            </MagneticButton>
-            <MagneticButton
-              href="https://luma.com/user/webpsy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 sm:px-8 sm:py-4 border border-[#14F195]/50 text-[#14F195] font-bold text-sm rounded-full hover:bg-[#14F195]/10 transition-colors inline-block text-center"
-            >
-              FinTech Event
             </MagneticButton>
           </motion.div>
             </div>

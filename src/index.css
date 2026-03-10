@@ -45,3 +45,17 @@ body {
 .animate-spin-slow {
   animation: spin 60s linear infinite;
 }
+
+/* CTA 主按钮：显眼发光脉冲 */
+@keyframes cta-glow {
+  0%, 100% { box-shadow: 0 0 16px rgba(20, 241, 149, 0.45), 0 0 32px rgba(20, 241, 149, 0.2); }
+  50% { box-shadow: 0 0 24px rgba(20, 241, 149, 0.65), 0 0 48px rgba(20, 241, 149, 0.35); }
+}
+.btn-cta-primary {
+  animation: cta-glow 2.2s ease-in-out infinite;
+}
+.btn-cta-primary:hover {
+  animation: cta-glow 1s ease-in-out infinite;
+  box-shadow: 0 0 28px rgba(20, 241, 149, 0.7), 0 0 56px rgba(20, 241, 149, 0.4);
+  transform: scale(1.05);
+}

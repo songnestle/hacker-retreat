@@ -17,8 +17,8 @@ const Home: React.FC = () => {
       <main>
         <Hero />
         <Partners />
-        <Events />
         <Nodes />
+        <Events />
         <Disciplines />
         <Vision />
         <Community />

@@ -27,6 +27,24 @@ const GitHubIcon = () => (
   </svg>
 );
 
+const XiaohongshuIcon = () => (
+  <div className="bg-[#FF2442] text-white text-[9px] px-2 py-0.5 rounded-full font-bold leading-none flex items-center justify-center -mr-1">
+    小红书
+  </div>
+);
+
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+  </svg>
+);
+
+const GlobeIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-4.115 15.545c.127-1.482.205-3.007.205-3.545 0-.539-.078-2.063-.205-3.545 1.995.31 4.023.31 6.017-.001-.126 1.481-.205 3.006-.205 3.545s.078 2.064.205 3.545c-1.995-.31-4.023-.311-6.017.001zm7.974 2.455c-1.122.188-2.545.288-3.859.288s-2.737-.1-3.859-.288c.871-1.303 1.942-2.316 3.12-3.356 1.178 1.04 2.248 2.053 3.12 3.356zm-1.859-6c0-.539.079-2.064.205-3.545 1.995.31 4.023.31 6.017-.001-.126 1.481-.205 3.006-.205 3.545s.078 2.064.205 3.545c-1.995-.31-4.023-.311-6.017.001-.126-1.481-.205-3.006-.205-3.545zm2.859-6c.871 1.303 1.942 2.316 3.12 3.356-1.178-1.04-2.248-2.053-3.12-3.356 1.122-.188 2.545-.288 3.859-.288s2.737.1 3.859.288zM4.847 8c1.178-1.04 2.248-2.053 3.12-3.356-1.122.188-2.545.288-3.859.288s-2.737-.1-3.859-.288c.871 1.303 1.942 2.316 3.12 3.356zm0 8c-1.178 1.04-2.248 2.053-3.12 3.356 1.122-.188 2.545-.288 3.859-.288s2.737.1 3.859.288c-.871-1.303-1.942-2.316-3.12-3.356zm12.153 0c1.178 1.04 2.248 2.053 3.12 3.356-1.122-.188-2.545-.288-3.859-.288s-2.737.1-3.859.288c.871-1.303 1.942-2.316 3.12-3.356zm0-8c-1.178-1.04-2.248-2.053-3.12-3.356 1.122.188 2.545.288 3.859.288s2.737-.1-3.859-.288c.871 1.303 1.942 2.316 3.12 3.356z"/>
+  </svg>
+);
+
 const teamMembers = [
   {
     name: 'Luo',
@@ -57,11 +75,20 @@ const teamMembers = [
     ]
   },
   {
+    name: 'Cygne Noir',
+    title: 'Full Stack & AI Dev',
+    avatar: '/CygneNoir.png',
+    socials: [
+      { name: 'Website', url: 'https://zielonanoir.github.io', icon: <GlobeIcon /> }
+    ]
+  },
+  {
     name: 'Unai',
     title: 'New Sector Research, AI, Fintech & Tokenization',
     avatar: '/Unai.jpeg',
     socials: [
-        { name: 'X', url: 'https://x.com/unaiyang', icon: <XIcon /> }
+        { name: 'X', url: 'https://x.com/unaiyang', icon: <XIcon /> },
+        { name: 'Instagram', url: 'https://www.instagram.com/unai27x?igsh=MTF5dmFna2pjcjlraw==', icon: <InstagramIcon /> }
     ]
   },
   {
@@ -69,36 +96,64 @@ const teamMembers = [
     title: (
         <>
             Founder of <a href="https://multifire.org" target="_blank" rel="noopener noreferrer" className="hover:text-white underline decoration-white/30 transition-colors">MultiFIRE Club</a><br/>
-            Former Silicon Valley engineer and investor
+            @人生游乐场 got 1.5w+ likes & cols on Xiaohongshu
         </>
     ),
     avatar: '/Leon.jpeg',
     socials: [
-        { name: 'YouTube', url: 'https://www.youtube.com/@multifireclub', icon: <YouTubeIcon /> }
+        { name: 'YouTube', url: 'https://www.youtube.com/@multifireclub', icon: <YouTubeIcon /> },
+        { name: 'Xiaohongshu', url: 'https://xhslink.com/m/4KzoU2H7DMr', icon: <XiaohongshuIcon /> }
     ]
   },
    {
     name: 'Sakya Lee',
-    title: 'Electronic Music Producer & Healing Practitioner',
+    title: (
+        <>
+            Electronic Music Producer & Healing Practitioner<br/>
+            @李教授电音疗愈 got 9051 likes & cols on Xiaohongshu
+        </>
+    ),
     avatar: '/SakyaLee.jpeg',
+    socials: [
+        { name: 'Xiaohongshu', url: 'https://xhslink.com/m/9wQgCb5l2uD', icon: <XiaohongshuIcon /> }
+    ]
   },
   {
     name: 'Chloe',
     title: 'Brand Lead',
     avatar: '/Chloe Brand Lead.jpg',
+    socials: [
+        { name: 'Instagram', url: 'https://www.instagram.com/chloenostylist', icon: <InstagramIcon /> },
+        { name: 'LinkedIn', url: 'https://www.linkedin.com/in/chloenostylist/', icon: <LinkedInIcon /> }
+    ]
+  },
+  {
+    name: 'Kuanfu Weimu',
+    title: (
+        <>
+            Art Advisor<br/>
+            @管付为模KUANFUWEIMU got 4043 likes & cols on Xiaohongshu
+        </>
+    ),
+    avatar: '/Kuanfu Weimu. Art Advisor Instagram  X @kuanfuweimu.jpg',
+    socials: [
+      { name: 'Instagram', url: 'https://instagram.com/kuanfuweimu', icon: <InstagramIcon /> },
+      { name: 'Xiaohongshu', url: 'https://xhslink.com/m/9rKX3JEffWA', icon: <XiaohongshuIcon /> }
+    ]
+  },
+  {
+    name: 'Wang Hsiaohi',
+    title: 'Core Member',
+    avatar: '/Wang Hsiaohi.png',
+    socials: [
+      { name: 'Website', url: 'https://sogo.la/', icon: <GlobeIcon /> },
+      { name: 'GitHub', url: 'https://github.com/yeahwong', icon: <GitHubIcon /> }
+    ]
   },
   {
     name: 'Oddie',
     title: 'Design Director',
     avatar: '/Oddie.jpeg',
-  },
-  {
-    name: 'Kuanfu Weimu',
-    title: 'Art Advisor',
-    avatar: '/Kuanfu Weimu. Art Advisor Instagram  X @kuanfuweimu.jpg',
-    socials: [
-      { name: 'Instagram', url: 'https://instagram.com/kuanfuweimu', icon: <InstagramIcon /> }
-    ]
   },
 ];
 

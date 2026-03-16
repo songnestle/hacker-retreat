@@ -22,28 +22,34 @@ export default function Partners() {
     { name: 'Odaily', url: 'https://www.odaily.news/en', logo: '/ODAILY.webp' },
     { name: 'PANews', url: 'http://panewslab.com/en', logo: '/PANews.webp' },
     { name: 'TechFlow', url: 'https://www.techflowpost.com', logo: '/TechFlow.webp' },
-    { name: 'ChainCatcher', url: 'http://chaincatcher.com/en', logo: '/Chaincatcher.webp' }
+    { name: 'ChainCatcher', url: 'http://chaincatcher.com/en', logo: '/Chaincatcher.webp' },
+    { name: 'AWS', url: 'https://aws.amazon.com', logo: '/aws.png' },
+    { name: 'Kimi', url: 'https://www.moonshot.cn', logo: '/kimi-with-icon-dark.png' },
+    { name: 'ME', url: 'https://magiceden.io', logo: '/ME.png' }
   ];
 
+  // List of logos that need a white background for visibility
+  const whiteBgLogos = ['AWS'];
+
   return (
-    <div className="w-full bg-black py-16 border-y border-white/5 overflow-hidden relative z-20" id="partners">
+    <div className="w-full bg-black py-16 border-y border-white/5 overflow-hidden relative z-20" id="projects">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mb-8">
         <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">Powering the ecosystem</p>
       </div>
 
       <div className="relative w-full flex overflow-x-hidden group mask-linear-gradient">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-20 pl-6">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-12 pl-6">
           {[...partners, ...partners, ...partners].map((partner, index) => (
             <div
               key={`${partner.name}-${index}`}
-              className="flex flex-col items-center justify-center gap-4 select-none min-w-[200px]"
+              className="flex flex-col items-center justify-center gap-4 select-none min-w-[140px]"
             >
               {/* Logo */}
-              <div className="h-16 w-auto flex items-center justify-center">
+              <div className={`h-16 flex items-center justify-center ${whiteBgLogos.includes(partner.name) ? 'bg-white rounded-xl px-4 py-2' : 'w-auto'}`}>
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-full w-auto object-contain max-w-[180px]"
+                  className={`h-full w-auto object-contain max-w-[180px] ${whiteBgLogos.includes(partner.name) ? 'brightness-100 contrast-125' : ''}`}
                   onError={(e) => {
                     // Fallback to PNG if SVG doesn't exist
                     const target = e.target as HTMLImageElement;
@@ -62,8 +68,8 @@ export default function Partners() {
         </div>
 
         {/* Gradients to fade edges */}
-        <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-black to-transparent z-10"></div>
-        <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-black to-transparent z-10"></div>
+        <div className="absolute top-0 left-0 w-32 h-full bg-linear-to-r from-black to-transparent z-10"></div>
+        <div className="absolute top-0 right-0 w-32 h-full bg-linear-to-l from-black to-transparent z-10"></div>
       </div>
 
       <style>{`

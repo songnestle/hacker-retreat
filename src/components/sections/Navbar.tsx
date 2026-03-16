@@ -23,9 +23,9 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Projects', href: '#projects' },
+    { name: 'Nodes', href: '#nodes' },
     { name: 'Residencies', href: '#residencies' },
     { name: 'Research', href: '#research' },
-    { name: 'Nodes', href: '#nodes' },
     { name: 'About', href: '#about' },
   ];
 

@@ -105,8 +105,9 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 48,
     y: 42,
-    positionClass: 'left-[48%] top-[42%]',
-    nodeSizeClass: 'w-[152px] md:w-[168px]'
+    // Mobile first, then scale up on larger screens
+    positionClass: 'left-[52%] top-[34%] sm:left-[48%] sm:top-[42%]',
+    nodeSizeClass: 'w-[120px] sm:w-[152px] md:w-[168px]'
   },
   {
     id: 'jason-jiao',
@@ -125,8 +126,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 24,
     y: 24,
-    positionClass: 'left-[24%] top-[24%]',
-    nodeSizeClass: 'w-[132px] md:w-[144px]'
+    positionClass: 'left-[22%] top-[18%] sm:left-[24%] sm:top-[24%]',
+    nodeSizeClass: 'w-[108px] sm:w-[132px] md:w-[144px]'
   },
   {
     id: 'cygne-noir',
@@ -139,8 +140,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 76,
     y: 18,
-    positionClass: 'left-[76%] top-[18%]',
-    nodeSizeClass: 'w-[120px] md:w-[128px]'
+    positionClass: 'left-[80%] top-[24%] sm:left-[76%] sm:top-[18%]',
+    nodeSizeClass: 'w-[104px] sm:w-[120px] md:w-[128px]'
   },
   {
     id: 'unai',
@@ -154,8 +155,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 14,
     y: 50,
-    positionClass: 'left-[14%] top-[50%]',
-    nodeSizeClass: 'w-[118px] md:w-[126px]'
+    positionClass: 'left-[16%] top-[46%] sm:left-[14%] sm:top-[50%]',
+    nodeSizeClass: 'w-[104px] sm:w-[118px] md:w-[126px]'
   },
   {
     id: 'leon',
@@ -174,8 +175,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 58,
     y: 24,
-    positionClass: 'left-[58%] top-[24%]',
-    nodeSizeClass: 'w-[140px] md:w-[156px]'
+    positionClass: 'left-[52%] top-[14%] sm:left-[58%] sm:top-[24%]',
+    nodeSizeClass: 'w-[114px] sm:w-[140px] md:w-[156px]'
   },
   {
     id: 'join-us',
@@ -184,8 +185,8 @@ const teamMembers: NetworkMember[] = [
     profileUrl: 'https://t.me/+hcJ97ZnmLVZhNDQ1',
     x: 86,
     y: 42,
-    positionClass: 'left-[86%] top-[42%]',
-    nodeSizeClass: 'w-[132px] md:w-[144px]',
+    positionClass: 'left-[80%] top-[50%] sm:left-[86%] sm:top-[42%]',
+    nodeSizeClass: 'w-[116px] sm:w-[132px] md:w-[144px]',
     isJoinSlot: true
   },
   {
@@ -204,8 +205,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 20,
     y: 76,
-    positionClass: 'left-[20%] top-[76%]',
-    nodeSizeClass: 'w-[118px] md:w-[126px]'
+    positionClass: 'left-[18%] top-[74%] sm:left-[20%] sm:top-[76%]',
+    nodeSizeClass: 'w-[104px] sm:w-[118px] md:w-[126px]'
   },
   {
     id: 'chloe',
@@ -219,8 +220,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 38,
     y: 64,
-    positionClass: 'left-[38%] top-[64%]',
-    nodeSizeClass: 'w-[118px] md:w-[126px]'
+    positionClass: 'left-[44%] top-[60%] sm:left-[38%] sm:top-[64%]',
+    nodeSizeClass: 'w-[104px] sm:w-[118px] md:w-[126px]'
   },
   {
     id: 'kuanfu-weimu',
@@ -239,8 +240,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 70,
     y: 72,
-    positionClass: 'left-[70%] top-[72%]',
-    nodeSizeClass: 'w-[120px] md:w-[128px]'
+    positionClass: 'left-[72%] top-[70%] sm:left-[70%] sm:top-[72%]',
+    nodeSizeClass: 'w-[106px] sm:w-[120px] md:w-[128px]'
   },
   {
     id: 'wang-hsiaohi',
@@ -254,8 +255,8 @@ const teamMembers: NetworkMember[] = [
     ],
     x: 84,
     y: 60,
-    positionClass: 'left-[84%] top-[60%]',
-    nodeSizeClass: 'w-[118px] md:w-[126px]'
+    positionClass: 'left-[84%] top-[78%] sm:left-[84%] sm:top-[60%]',
+    nodeSizeClass: 'w-[104px] sm:w-[118px] md:w-[126px]'
   },
   {
     id: 'oddie',
@@ -265,8 +266,8 @@ const teamMembers: NetworkMember[] = [
     profileUrl: 'https://webpsy.net',
     x: 58,
     y: 86,
-    positionClass: 'left-[58%] top-[86%]',
-    nodeSizeClass: 'w-[114px] md:w-[122px]'
+    positionClass: 'left-[54%] top-[88%] sm:left-[58%] sm:top-[86%]',
+    nodeSizeClass: 'w-[100px] sm:w-[114px] md:w-[122px]'
   }
 ];
 
@@ -318,7 +319,7 @@ export default function Nodes() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="relative h-[920px] md:h-[860px] rounded-4xl border border-white/10 bg-black/60 overflow-hidden">
+            <div className="relative h-[1120px] sm:h-[920px] md:h-[860px] rounded-4xl border border-white/10 bg-black/60 overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_38%,rgba(20,241,149,0.12),transparent_33%),radial-gradient(circle_at_78%_22%,rgba(153,69,255,0.14),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.02),transparent_32%)]" />
               <div className="absolute inset-0 opacity-25 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size-[64px_64px]" />
               <div className="absolute inset-0 bg-black/15" />

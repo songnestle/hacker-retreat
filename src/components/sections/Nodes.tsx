@@ -288,7 +288,14 @@ const networkConnections: Connection[] = [
   { from: 'wang-hsiaohi', to: 'oddie', opacity: 0.66 },
   { from: 'join-us', to: 'chloe', opacity: 0.36 },
   { from: 'join-us', to: 'kuanfu-weimu', opacity: 0.44 },
-  { from: 'join-us', to: 'oddie', opacity: 0.34 }
+  { from: 'join-us', to: 'oddie', opacity: 0.34 },
+  // subtle mycelium side-branches (thin, low opacity)
+  { from: 'cygne-noir', to: 'wang-hsiaohi', opacity: 0.26 },
+  { from: 'cygne-noir', to: 'kuanfu-weimu', opacity: 0.22 },
+  { from: 'jason-jiao', to: 'chloe', opacity: 0.22 },
+  { from: 'unai', to: 'chloe', opacity: 0.2 },
+  { from: 'sakya-lee', to: 'oddie', opacity: 0.18 },
+  { from: 'kuanfu-weimu', to: 'oddie', opacity: 0.22 }
 ];
 
 export default function Nodes() {
@@ -335,6 +342,22 @@ export default function Nodes() {
                     <stop offset="50%" stopColor="rgba(20,241,149,0.5)" />
                     <stop offset="100%" stopColor="rgba(153,69,255,0.2)" />
                   </linearGradient>
+                  <filter id="mycelium-glow" x="-30%" y="-30%" width="160%" height="160%">
+                    <feGaussianBlur stdDeviation="0.9" result="blur" />
+                    <feColorMatrix
+                      in="blur"
+                      type="matrix"
+                      values="1 0 0 0 0
+                              0 1 0 0 0
+                              0 0 1 0 0
+                              0 0 0 0.8 0"
+                      result="glow"
+                    />
+                    <feMerge>
+                      <feMergeNode in="glow" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
                 </defs>
 
                 {networkConnections.map((connection, index) => {
@@ -342,22 +365,45 @@ export default function Nodes() {
                   const to = getMemberById(connection.to, teamMembers);
                   if (!from || !to) return null;
 
+                  const baseWidth = 0.35 + connection.opacity * 0.75; // 0.6..1.1-ish
+                  const dashA = 2.5;
+                  const dashB = 8.5;
+                  const duration = 18 + (1 - connection.opacity) * 12 + index * 0.15;
+
                   return (
-                    <motion.path
-                      key={`${connection.from}-${connection.to}`}
-                      d={buildCurvePath(from, to)}
-                      fill="none"
-                      stroke="url(#network-line)"
-                      strokeWidth="0.6"
-                      strokeLinecap="round"
-                      strokeDasharray="4 10"
-                      initial={{ opacity: 0, strokeDashoffset: 0 }}
-                      animate={{ opacity: connection.opacity, strokeDashoffset: -50 }}
-                      transition={{
-                        opacity: { duration: 1, delay: index * 0.05 },
-                        strokeDashoffset: { duration: 12 + index * 0.4, repeat: Infinity, ease: 'linear' }
-                      }}
-                    />
+                    <g key={`${connection.from}-${connection.to}`}>
+                      {/* glow layer */}
+                      <motion.path
+                        d={buildCurvePath(from, to)}
+                        fill="none"
+                        stroke="url(#network-line)"
+                        strokeWidth={baseWidth * 2.4}
+                        strokeLinecap="round"
+                        strokeDasharray={`${dashA} ${dashB}`}
+                        filter="url(#mycelium-glow)"
+                        initial={{ opacity: 0, strokeDashoffset: 0 }}
+                        animate={{ opacity: connection.opacity * 0.55, strokeDashoffset: -80 }}
+                        transition={{
+                          opacity: { duration: 1, delay: index * 0.03 },
+                          strokeDashoffset: { duration, repeat: Infinity, ease: 'linear' }
+                        }}
+                      />
+                      {/* core filament */}
+                      <motion.path
+                        d={buildCurvePath(from, to)}
+                        fill="none"
+                        stroke="url(#network-line)"
+                        strokeWidth={baseWidth}
+                        strokeLinecap="round"
+                        strokeDasharray={`${dashA} ${dashB}`}
+                        initial={{ opacity: 0, strokeDashoffset: 0 }}
+                        animate={{ opacity: connection.opacity, strokeDashoffset: -80 }}
+                        transition={{
+                          opacity: { duration: 1, delay: index * 0.03 },
+                          strokeDashoffset: { duration: duration * 0.92, repeat: Infinity, ease: 'linear' }
+                        }}
+                      />
+                    </g>
                   );
                 })}
               </svg>

@@ -38,7 +38,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 w-full">
         {/* Title Box with ColorBends Background - full screen */}
-        <div className="relative w-screen min-h-screen overflow-hidden p-6 md:p-12">
+        <div className="relative w-full min-h-screen overflow-hidden">
           {/* ColorBends full background - fills viewport */}
           <div className="absolute inset-0 z-0 min-h-full min-w-full">
             <ColorBends
@@ -57,15 +57,15 @@ export default function Hero() {
             />
           </div>
           {/* Content Layer */}
-          <div className="relative z-10 max-w-[1440px] mx-auto px-4 md:px-12 pt-24 md:pt-32">
-            <div className="max-w-4xl md:max-w-2xl">
+          <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pt-32 pb-24 h-full flex flex-col justify-center min-h-screen">
+            <div className="w-full max-w-4xl md:max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="mb-8 w-full"
           >
-            <span className="inline-block py-1.5 px-4 border border-[#14F195]/30 rounded-full bg-[#14F195]/10 text-[10px] font-bold tracking-widest uppercase text-[#14F195]">
+            <span className="block w-full text-center sm:inline-block sm:w-auto py-2 px-4 border border-[#14F195]/30 rounded-full bg-[#14F195]/10 text-[10px] sm:text-xs font-bold tracking-widest uppercase text-[#14F195]">
               POWERED BY MYCOFI PROTOCOL
             </span>
           </motion.div>
@@ -76,7 +76,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <h1 className="font-pixel-fine text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white leading-none whitespace-nowrap">
+            <h1 className="font-pixel-fine text-[11vw] xs:text-[12vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white leading-none whitespace-normal sm:whitespace-nowrap break-words w-full">
               <ScrambleText text="WebPsy Labs" delay={0.5} />
             </h1>
           </motion.div>
@@ -85,7 +85,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm md:text-base text-gray-400 max-w-[75%] font-normal leading-snug mb-10"
+            className="text-sm md:text-base text-gray-400 w-full sm:max-w-[75%] font-normal leading-snug mb-10 text-justify sm:text-left"
           >
             WebPsy Labs is a frontier hacker agency formed by elite builders across <ScrambleText text="AI" delay={1.2} className="text-white" />, <ScrambleText text="Web3" delay={1.4} className="text-white" />, and <ScrambleText text="BioTech" delay={1.6} className="text-white" />, shaping next-generation paradigms for technology, brand, and growth.
           </motion.p>
@@ -107,8 +107,8 @@ export default function Hero() {
             </MagneticButton>
 
             {/* Mobile icon dock (looks cleaner than vertical stack) */}
-            <div className="sm:hidden w-full">
-              <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-black/35 backdrop-blur-md px-3 py-2">
+            <div className="sm:hidden w-full mt-2">
+              <div className="flex w-full justify-between items-center rounded-full border border-white/15 bg-black/35 backdrop-blur-md px-4 py-2">
                 <MagneticButton
                   href="https://x.com/webpsylabs"
                   target="_blank"

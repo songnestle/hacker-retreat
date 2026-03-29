@@ -15,7 +15,7 @@ const footerLinks = [
     title: 'Connect',
     items: [
       { name: 'Instagram', url: 'https://www.instagram.com/webpsylabs/' },
-      { name: 'X (Twitter)', url: 'https://x.com/webpsylabs' },
+      { name: 'X (Twitter)', url: 'https://x.com/solarark_2048?s=21' },
       { name: 'Ton / Telegram', url: 'https://t.me/+hcJ97ZnmLVZhNDQ1' },
       { name: 'Luma', url: 'https://luma.com/user/webpsy' }
     ]

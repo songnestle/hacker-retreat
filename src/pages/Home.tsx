@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/sections/Navbar';
 import Hero from '../components/sections/Hero';
+import AgentPunkSummit from '../components/sections/AgentPunkSummit';
 import Partners from '../components/sections/Partners';
 import Disciplines from '../components/sections/Disciplines';
 import Vision from '../components/sections/Vision';
@@ -16,6 +17,7 @@ const Home: React.FC = () => {
       
       <main>
         <Hero />
+        <AgentPunkSummit />
         <Partners />
         <Nodes />
         <Events />

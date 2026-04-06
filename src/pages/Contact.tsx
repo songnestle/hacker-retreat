@@ -1,8 +1,12 @@
 import React from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Navbar from '../components/sections/Navbar';
 import Footer from '../components/sections/Footer';
 
 const Contact: React.FC = () => {
+  const [searchParams] = useSearchParams();
+  const topic = searchParams.get('topic');
+
   return (
     <div className="min-h-screen w-full bg-black text-white font-['Inter'] selection:bg-[#14F195] selection:text-black overflow-x-hidden">
       <Navbar />
@@ -11,6 +15,23 @@ const Contact: React.FC = () => {
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="space-y-8">
             <h1 className="text-5xl md:text-6xl font-bold mb-8">Contact Us</h1>
+
+            {topic === 'demo' && (
+              <div className="rounded-2xl border border-[#14F195]/30 bg-[#14F195]/10 px-6 py-4 text-[#14F195]">
+                <p className="font-semibold text-white">AgentPunk Summit — Demo</p>
+                <p className="mt-1 text-sm text-white/80">
+                  Share a short description, link, and contact on Telegram so we can sync your demo for the summit.
+                </p>
+              </div>
+            )}
+            {topic === 'partner' && (
+              <div className="rounded-2xl border border-white/20 bg-white/5 px-6 py-4 text-white/90">
+                <p className="font-semibold text-white">Partnership & city nodes</p>
+                <p className="mt-1 text-sm text-gray-400">
+                  Sponsors, speakers, hackathon co-hosts, and city partners — tell us what you want to build together.
+                </p>
+              </div>
+            )}
             
             <div className="space-y-8 text-lg text-gray-300">
               <div>

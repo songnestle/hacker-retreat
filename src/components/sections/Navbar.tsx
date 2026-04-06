@@ -22,6 +22,7 @@ export default function Navbar() {
   }, [location]);
 
   const navLinks = [
+    { name: 'Summit', href: '#agentpunk-summit' },
     { name: 'Projects', href: '#projects' },
     { name: 'Nodes', href: '#nodes' },
     { name: 'Residencies', href: '#residencies' },

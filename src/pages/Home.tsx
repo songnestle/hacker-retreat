@@ -12,10 +12,10 @@ import Footer from '../components/sections/Footer';
 
 const Home: React.FC = () => {
   return (
-    <div className="min-h-screen w-full bg-black text-white font-['Inter'] selection:bg-[#14F195] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen w-full min-w-0 bg-black text-white font-['Inter'] selection:bg-[#14F195] selection:text-black overflow-x-hidden">
       <Navbar />
       
-      <main>
+      <main className="min-w-0">
         <Hero />
         <AgentPunkSummit />
         <Partners />

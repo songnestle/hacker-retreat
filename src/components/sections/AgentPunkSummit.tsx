@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import MagneticButton from '../ui/MagneticButton';
 
-const LUMA_URL = 'https://luma.com/user/webpsy';
+const LUMA_URL = 'https://luma.com/275o2p22';
+const PARTNER_FORM_URL =
+  'https://docs.qq.com/form/page/DR1BmR3hmcXZMcUxS';
 
 const CLI_SNIPPET = `agentpunk --root \\
   --name "AGENTPUNK2077｜HK" \\
   --time "2026.04.19 // GMT+8" \\
   --location "AWS Hong Kong" \\
-  --link "https://luma.com/user/webpsy" \\
+  --link "https://luma.com/275o2p22" \\
   --stack "AI × Web3 × Agents" \\
   --load "builders; devs; researchers; city-nodes" \\
   --boot "self_inspect(); filter_signal(); activate_network();" \\
@@ -19,29 +21,29 @@ const glassPanel =
   'rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_0_1px_rgba(255,255,255,0.04)_inset]';
 
 const btnOutline =
-  'inline-flex items-center justify-center px-6 py-3 rounded-full font-bold text-sm uppercase tracking-wider border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300';
+  'flex min-w-0 w-full shrink-0 items-center justify-center px-4 py-3.5 sm:px-6 sm:py-3 rounded-full text-center text-xs font-bold uppercase tracking-wide sm:tracking-wider sm:text-sm border border-white/25 bg-white/5 text-white hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-normal leading-snug sm:w-auto sm:whitespace-nowrap';
 
 export default function AgentPunkSummit() {
   return (
     <section
       id="agentpunk-summit"
-      className="relative scroll-mt-24 border-t border-white/5 bg-black py-24 text-white"
+      className="relative w-full min-w-0 scroll-mt-24 border-t border-white/5 bg-black py-16 text-white sm:py-24"
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(153,69,255,0.15),transparent_55%),radial-gradient(ellipse_60%_40%_at_100%_50%,rgba(20,241,149,0.08),transparent_50%)]" />
 
-      <div className="relative z-10 mx-auto max-w-[1440px] px-6 md:px-12">
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
+      <div className="relative z-10 mx-auto w-full min-w-0 max-w-[1440px] px-4 sm:px-6 md:px-12">
+        <div className="grid w-full min-w-0 grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center lg:gap-14">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`overflow-hidden ${glassPanel}`}
+            className={`min-w-0 w-full max-w-full overflow-hidden ${glassPanel}`}
           >
             <img
               src="/AGENTPUNKSUMMIT.png"
               alt="AGENTPUNK SUMMIT Hong Kong — April 19 2026 at AWS Hong Kong"
-              className="h-full w-full object-cover object-center"
+              className="h-auto w-full max-w-full object-cover object-center"
               loading="lazy"
             />
           </motion.div>
@@ -51,13 +53,13 @@ export default function AgentPunkSummit() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.08 }}
-            className="flex flex-col gap-8"
+            className="flex min-w-0 w-full max-w-full flex-col gap-6 sm:gap-8"
           >
-            <div>
-              <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-[#14F195]/90">
+            <div className="min-w-0">
+              <p className="mb-3 wrap-break-word text-[10px] font-bold uppercase tracking-[0.12em] text-[#14F195]/90 xs:text-xs sm:tracking-[0.2em]">
                 AGENTPUNK SUMMIT · HONG KONG
               </p>
-              <h2 className="mb-4 bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-4xl font-semibold tracking-tight text-transparent md:text-5xl">
+              <h2 className="mb-4 wrap-break-word bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-3xl font-semibold tracking-tight text-transparent sm:text-4xl md:text-5xl">
                 AGENTPUNK SUMMIT｜HONG KONG
               </h2>
               <p className="text-lg text-white/80 md:text-xl">
@@ -93,27 +95,32 @@ export default function AgentPunkSummit() {
               </div>
             </div>
 
-            <div className={`p-6 ${glassPanel}`}>
-              <pre className="overflow-x-auto text-left text-xs leading-relaxed text-white/85 md:text-sm font-mono whitespace-pre">
+            <div className={`min-w-0 w-full max-w-full p-4 sm:p-6 ${glassPanel}`}>
+              <pre className="min-w-0 w-full max-w-full text-left font-mono text-[0.625rem] leading-relaxed whitespace-pre-wrap wrap-anywhere text-white/85 sm:text-xs md:text-sm md:whitespace-pre md:overflow-x-auto md:wrap-normal">
                 {CLI_SNIPPET}
               </pre>
             </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap">
               <MagneticButton
                 href={LUMA_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full px-6 py-3 sm:w-auto rounded-full border-2 border-[#14F195] bg-[#14F195] text-sm font-bold uppercase tracking-wider text-black transition-all duration-300 hover:border-[#2affb8] hover:bg-[#2affb8] inline-flex items-center justify-center"
+                className="box-border min-w-0 w-full shrink-0 px-4 py-3.5 text-center text-xs font-bold uppercase tracking-wide text-black sm:w-auto sm:px-6 sm:py-3 sm:text-sm sm:tracking-wider inline-flex items-center justify-center rounded-full border-2 border-[#14F195] bg-[#14F195] transition-all duration-300 hover:border-[#2affb8] hover:bg-[#2affb8] whitespace-normal leading-snug sm:whitespace-nowrap"
               >
                 Event Link
               </MagneticButton>
-              <Link to="/contact?topic=demo" className={`w-full sm:w-auto ${btnOutline}`}>
+              <Link to="/contact?topic=demo" className={`sm:w-auto ${btnOutline}`}>
                 Update Demo
               </Link>
-              <Link to="/contact?topic=partner" className={`w-full sm:w-auto ${btnOutline}`}>
+              <a
+                href={PARTNER_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`sm:w-auto ${btnOutline}`}
+              >
                 Join Partner
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

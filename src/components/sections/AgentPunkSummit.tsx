@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import MagneticButton from '../ui/MagneticButton';
 
-const LUMA_URL = 'https://luma.com/275o2p22';
+const LUMA_URL = 'https://luma.com/pvjorhip';
 const PARTNER_FORM_URL =
   'https://docs.qq.com/form/page/DR1BmR3hmcXZMcUxS';
 
@@ -11,7 +11,7 @@ const CLI_SNIPPET = `agentpunk --root \\
   --name "AGENTPUNK2077｜HK" \\
   --time "2026.04.19 // GMT+8" \\
   --location "AWS Hong Kong" \\
-  --link "https://luma.com/275o2p22" \\
+  --link "https://luma.com/pvjorhip" \\
   --stack "AI × Web3 × Agents" \\
   --load "builders; devs; researchers; city-nodes" \\
   --boot "self_inspect(); filter_signal(); activate_network();" \\

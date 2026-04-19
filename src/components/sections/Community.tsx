@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Community() {
   return (
-    <section className="py-24 bg-black px-6 border-t border-white/5" id="community">
+    <section className="scroll-mt-24 py-24 bg-black px-6 border-t border-white/5" id="community">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
         {/* Left: Research / Insights */}
         <div>

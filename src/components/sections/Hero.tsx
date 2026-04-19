@@ -76,7 +76,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mb-6"
           >
-            <h1 className="font-pixel-fine text-[11vw] xs:text-[12vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white leading-none whitespace-normal sm:whitespace-nowrap break-words w-full">
+            <h1 className="font-pixel-fine text-[11vw] xs:text-[12vw] sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight text-white leading-none whitespace-normal sm:whitespace-nowrap wrap-break-word w-full">
               <ScrambleText text="WebPsy Labs" delay={0.5} />
             </h1>
           </motion.div>
@@ -121,7 +121,7 @@ export default function Hero() {
                   <span className="sr-only">X</span>
                 </MagneticButton>
                 <MagneticButton
-                  href="https://www.instagram.com/webpsylabs/"
+                  href="https://www.instagram.com/uniclub_1968?igsh=MXdqYnh6cWd0ZGZ5cA=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-white/25 bg-white/5 text-white hover:bg-white/12 hover:border-white/45 transition-all duration-300"
@@ -170,7 +170,7 @@ export default function Hero() {
                 <span className="sr-only">X</span>
               </MagneticButton>
               <MagneticButton
-                href="https://www.instagram.com/webpsylabs/"
+                href="https://www.instagram.com/uniclub_1968?igsh=MXdqYnh6cWd0ZGZ5cA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/30 bg-white/5 text-white hover:bg-white/12 hover:border-white/55 transition-all duration-300"

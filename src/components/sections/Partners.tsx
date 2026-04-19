@@ -32,7 +32,7 @@ export default function Partners() {
   const whiteBgLogos = ['AWS'];
 
   return (
-    <div className="w-full bg-black py-16 border-y border-white/5 overflow-hidden relative z-20" id="projects">
+    <div className="scroll-mt-24 w-full bg-black py-16 border-y border-white/5 overflow-hidden relative z-20" id="projects">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mb-8">
         <p className="text-sm text-gray-500 uppercase tracking-widest font-semibold">Powering the ecosystem</p>
       </div>

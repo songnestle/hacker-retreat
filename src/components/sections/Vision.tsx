@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function Vision() {
   return (
-    <section className="py-40 relative bg-black flex items-center justify-center overflow-hidden" id="about">
+    <section className="scroll-mt-24 py-40 relative bg-black flex items-center justify-center overflow-hidden" id="about">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 opacity-10" 
         style={{

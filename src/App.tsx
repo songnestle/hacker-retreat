@@ -6,12 +6,14 @@ import Contact from './pages/Contact';
 
 import SmoothScroll from './components/visuals/SmoothScroll';
 import NoiseOverlay from './components/visuals/NoiseOverlay';
+import HashScrollHandler from './components/HashScrollHandler';
 
 const App: React.FC = () => {
   return (
     <SmoothScroll>
       <NoiseOverlay />
       <BrowserRouter>
+        <HashScrollHandler />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

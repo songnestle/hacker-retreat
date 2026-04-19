@@ -9,7 +9,7 @@ const PARTNER_FORM_URL =
 
 const CLI_SNIPPET = `agentpunk --root \\
   --name "AGENTPUNK2077｜HK" \\
-  --time "2026.04.19 // GMT+8" \\
+  --time "April 19, 2026 // GMT+8" \\
   --location "AWS Hong Kong" \\
   --link "https://luma.com/pvjorhip" \\
   --stack "AI × Web3 × Agents" \\
@@ -42,7 +42,7 @@ export default function AgentPunkSummit() {
           >
             <img
               src="/AGENTPUNKSUMMIT.png"
-              alt="AGENTPUNK SUMMIT Hong Kong — April 19 2026 at AWS Hong Kong"
+              alt="AGENTPUNK SUMMIT Hong Kong — April 19, 2026 at AWS Hong Kong"
               className="h-auto w-full max-w-full object-cover object-center"
               loading="lazy"
             />
@@ -56,42 +56,32 @@ export default function AgentPunkSummit() {
             className="flex min-w-0 w-full max-w-full flex-col gap-6 sm:gap-8"
           >
             <div className="min-w-0">
-              <p className="mb-3 wrap-break-word text-[10px] font-bold uppercase tracking-[0.12em] text-[#14F195]/90 xs:text-xs sm:tracking-[0.2em]">
-                AGENTPUNK SUMMIT · HONG KONG
-              </p>
               <h2 className="mb-4 wrap-break-word bg-linear-to-b from-white via-white to-white/60 bg-clip-text text-3xl font-semibold tracking-tight text-transparent sm:text-4xl md:text-5xl">
                 AGENTPUNK SUMMIT｜HONG KONG
               </h2>
               <p className="text-lg text-white/80 md:text-xl">
-                2026.04.19 · Hong Kong · AWS
+                April 19, 2026 · Hong Kong · AWS
               </p>
             </div>
 
             <p className="text-lg font-medium text-white/90">
-              From Signal to Network Activation
+              Where AI Builders Come Together
             </p>
 
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p>
-                AgentPunk Summit is an AI-native summit and global Haicker network.
+                AgentPunk Summit brings together AI builders, founders, and researchers from across the globe. A{' '}
+                <abbr
+                  title="Cross-disciplinary builders who ship across AI, Web3, and real-world systems."
+                  className="cursor-help border-b border-dotted border-white/30 text-white/90 no-underline"
+                >
+                  Haicker
+                </abbr>{' '}
+                is our term for that builder archetype—a nod to 黑客 and the hacker-builder ethos.
               </p>
-              <div>
-                <p className="mb-1 font-semibold text-white">Open Call</p>
-                <p className="text-white/70">
-                  Sponsors · Speakers · Hackathon Co-hosts · City Partners
-                </p>
-              </div>
               <div>
                 <p className="mb-1 font-semibold text-white">Endless Haickthon</p>
                 <p className="text-white/70">by WebPsy Labs</p>
-                <a
-                  href="https://webpsy.net"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-1 inline-block text-[#14F195] underline-offset-4 hover:underline"
-                >
-                  webpsy.net
-                </a>
               </div>
             </div>
 
@@ -108,10 +98,10 @@ export default function AgentPunkSummit() {
                 rel="noopener noreferrer"
                 className="box-border min-w-0 w-full shrink-0 px-4 py-3.5 text-center text-xs font-bold uppercase tracking-wide text-black sm:w-auto sm:px-6 sm:py-3 sm:text-sm sm:tracking-wider inline-flex items-center justify-center rounded-full border-2 border-[#14F195] bg-[#14F195] transition-all duration-300 hover:border-[#2affb8] hover:bg-[#2affb8] whitespace-normal leading-snug sm:whitespace-nowrap"
               >
-                Event Link
+                Register now
               </MagneticButton>
               <Link to="/contact?topic=demo" className={`sm:w-auto ${btnOutline}`}>
-                Update Demo
+                Submit your demo
               </Link>
               <a
                 href={PARTNER_FORM_URL}
@@ -119,7 +109,7 @@ export default function AgentPunkSummit() {
                 rel="noopener noreferrer"
                 className={`sm:w-auto ${btnOutline}`}
               >
-                Join Partner
+                Become a partner
               </a>
             </div>
           </motion.div>

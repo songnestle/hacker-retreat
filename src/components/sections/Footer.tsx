@@ -1,20 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const footerLinks = [
+type FooterItem = {
+  name: string;
+  /** External URL, or internal path+hash for same-site scroll */
+  url: string;
+  /** When set, render as <Link> to home + hash (SPA-friendly scroll targets) */
+  homeHash?: string;
+};
+
+const footerLinks: { title: string; items: FooterItem[] }[] = [
   {
     title: 'WebPsy Labs',
     items: [
-      { name: 'About', url: '#' },
-      { name: 'Careers', url: '#' },
-      { name: 'Brand Assets', url: '#' },
-      { name: 'Terms of Service', url: '#' },
-      { name: 'Privacy Policy', url: '#' }
+      { name: 'About', url: '/', homeHash: 'about' },
+      { name: 'Careers', url: '/', homeHash: 'community' },
+      { name: 'Brand Assets', url: '/', homeHash: 'projects' },
+      { name: 'Terms of Service', url: '/', homeHash: 'terms' },
+      { name: 'Privacy Policy', url: '/', homeHash: 'privacy' }
     ]
   },
   {
     title: 'Connect',
     items: [
-      { name: 'Instagram', url: 'https://www.instagram.com/webpsylabs/' },
+      { name: 'Instagram', url: 'https://www.instagram.com/uniclub_1968?igsh=MXdqYnh6cWd0ZGZ5cA==' },
       { name: 'X (Twitter)', url: 'https://x.com/solarark_2048?s=21' },
       { name: 'Ton / Telegram', url: 'https://t.me/+hcJ97ZnmLVZhNDQ1' },
       { name: 'Luma', url: 'https://luma.com/user/webpsy' }
@@ -24,7 +33,7 @@ const footerLinks = [
     title: 'Resources',
     items: [
       { name: 'Concept Deck', url: 'https://docs.google.com/presentation/d/18hqGIXaT9Nyma8GhTiMR7kpm7l0HqL5uxIbRzEARCe0/edit?usp=sharing' },
-      { name: 'Partner Assets', url: '#' }
+      { name: 'Partner Assets', url: '/', homeHash: 'projects' }
     ]
   }
 ];
@@ -54,19 +63,43 @@ export default function Footer() {
               <ul className="space-y-4">
                 {column.items.map((item, itemIdx) => (
                   <li key={itemIdx}>
-                    <a 
-                      href={item.url} 
-                      className="text-gray-500 hover:text-white transition-colors text-sm font-medium"
-                      target={item.url.startsWith('http') ? "_blank" : "_self"}
-                      rel={item.url.startsWith('http') ? "noopener noreferrer" : ""}
-                    >
-                      {item.name}
-                    </a>
+                    {item.homeHash ? (
+                      <Link
+                        to={{ pathname: '/', hash: item.homeHash }}
+                        className="text-gray-500 hover:text-white transition-colors text-sm font-medium"
+                      >
+                        {item.name}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.url}
+                        className="text-gray-500 hover:text-white transition-colors text-sm font-medium"
+                        target={item.url.startsWith('http') ? '_blank' : '_self'}
+                        rel={item.url.startsWith('http') ? 'noopener noreferrer' : ''}
+                      >
+                        {item.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mb-12 border-t border-white/10 pt-10">
+          <div id="terms" className="scroll-mt-28 mb-8">
+            <h5 className="mb-2 text-sm font-semibold text-white">Terms of Service</h5>
+            <p className="max-w-2xl text-xs leading-relaxed text-gray-600">
+              For the latest terms governing use of this site, contact WebPsy Labs via the Connect links above.
+            </p>
+          </div>
+          <div id="privacy" className="scroll-mt-28">
+            <h5 className="mb-2 text-sm font-semibold text-white">Privacy Policy</h5>
+            <p className="max-w-2xl text-xs leading-relaxed text-gray-600">
+              We process personal data in line with applicable regulations. Details are available on request through the same channels.
+            </p>
+          </div>
         </div>
 
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

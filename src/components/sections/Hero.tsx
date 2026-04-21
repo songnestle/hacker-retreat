@@ -110,7 +110,7 @@ export default function Hero() {
             <div className="sm:hidden w-full mt-2">
               <div className="flex w-full justify-between items-center rounded-full border border-white/15 bg-black/35 backdrop-blur-md px-4 py-2">
                 <MagneticButton
-                  href="https://x.com/solarark_2048?s=21"
+                  href="https://x.com/webpsylabs"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center h-10 w-10 rounded-full border border-white/25 bg-white/5 text-white hover:bg-white/12 hover:border-white/45 transition-all duration-300"
@@ -159,7 +159,7 @@ export default function Hero() {
             {/* Desktop inline icons */}
             <div className="hidden sm:flex items-center gap-2">
               <MagneticButton
-                href="https://x.com/solarark_2048?s=21"
+                href="https://x.com/webpsylabs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/30 bg-white/5 text-white hover:bg-white/12 hover:border-white/55 transition-all duration-300"

@@ -32,7 +32,7 @@ const socialLinks = [
   },
   {
     name: 'X',
-    url: 'https://x.com/SolarArk_2048',
+    url: 'https://x.com/webpsylabs',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -108,7 +108,7 @@ const App: React.FC = () => {
         <div className="relative flex-1 flex flex-col h-full w-full">
 
             {/* Decorative Vertical Line - Spans full height of this inner wrapper */}
-            <div className="absolute left-[-20px] top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-gray-700 to-transparent hidden md:block"></div>
+            <div className="absolute left-[-20px] top-0 bottom-0 w-px bg-linear-to-b from-transparent via-gray-700 to-transparent hidden md:block"></div>
 
             {/* --- TOP SECTION: Title --- */}
             <div className="w-full md:w-3/5 mb-12 md:mb-16">
@@ -132,19 +132,19 @@ const App: React.FC = () => {
                         <p className="text-xl md:text-3xl text-gray-400 font-light group-hover:text-white transition-colors duration-300">
                           AI & Agentic Future
                         </p>
-                        <div className="h-[1px] w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
+                        <div className="h-px w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
                     </div>
                     <div className="group">
                         <p className="text-xl md:text-3xl text-gray-400 font-light group-hover:text-white transition-colors duration-300">
                           Web3 & Networked Civilization
                         </p>
-                        <div className="h-[1px] w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
+                        <div className="h-px w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
                     </div>
                     <div className="group">
                         <p className="text-xl md:text-3xl text-gray-400 font-light group-hover:text-white transition-colors duration-300">
                           Biohacking & Longevity
                         </p>
-                        <div className="h-[1px] w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
+                        <div className="h-px w-0 group-hover:w-24 bg-white transition-all duration-500 mt-2"></div>
                     </div>
                 </div>
 
@@ -172,7 +172,7 @@ const App: React.FC = () => {
             </div>
 
             {/* SPACER - Pushes the footer section to the bottom and creates distance */}
-            <div className="flex-1 min-h-[4rem]"></div>
+            <div className="flex-1 min-h-16"></div>
 
             {/* --- BOTTOM SECTION: Footer (Left) & Icons (Right) --- */}
             {/* Flex Row ensures alignment. items-end aligns the text baseline area with icons */}

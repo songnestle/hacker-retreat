@@ -24,7 +24,7 @@ const footerLinks: { title: string; items: FooterItem[] }[] = [
     title: 'Connect',
     items: [
       { name: 'Instagram', url: 'https://www.instagram.com/uniclub_1968?igsh=MXdqYnh6cWd0ZGZ5cA==' },
-      { name: 'X (Twitter)', url: 'https://x.com/solarark_2048?s=21' },
+      { name: 'X (Twitter)', url: 'https://x.com/webpsylabs' },
       { name: 'Ton / Telegram', url: 'https://t.me/+hcJ97ZnmLVZhNDQ1' },
       { name: 'Luma', url: 'https://luma.com/user/webpsy' }
     ]

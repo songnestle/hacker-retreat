@@ -32,6 +32,10 @@ const NotionIcon = () => (
   </svg>
 );
 
+const HostingIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg>
+);
+
 export default function Hero() {
   return (
     <div className="relative min-h-screen flex items-center overflow-hidden bg-black">
@@ -204,6 +208,17 @@ export default function Hero() {
               </MagneticButton>
             </div>
           </motion.div>
+            </div>
+            <div className="mt-6">
+              <a
+                href="https://ai.webpsy.net/home"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-white hover:bg-white/12 transition-all duration-300 whitespace-nowrap"
+              >
+                <span>Go to Gateway</span>
+                <HostingIcon />
+              </a>
             </div>
           </div>
         </div>
